@@ -41,7 +41,7 @@ public class Intialize {
 		capabilities.setCapability(MobileCapabilityType.APP,
 				System.getProperty("user.dir") + "\\src\\test\\resources\\NoBroker.apk");
 
-		driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+		driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		System.out.println("Driver set to android and returned driver");
 		return driver;
