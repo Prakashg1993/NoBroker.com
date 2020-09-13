@@ -12,7 +12,7 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class SearchPage {
 
-	AppiumDriver<WebElement> driver;
+	AppiumDriver<WebElement> driver; 
 
 	public SearchPage(AppiumDriver driver) {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);

@@ -4,6 +4,8 @@ import static io.appium.java_client.touch.TapOptions.tapOptions;
 import static io.appium.java_client.touch.offset.ElementOption.element;
 import java.io.IOException;
 import org.testng.annotations.Test;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -56,7 +58,7 @@ public class NB_BuyProperty extends Intialize {
 	public void SearchBuy() throws InterruptedException {
 		try {
 			String BHK[] = { "two", "three" };
-
+			searchPage=new SearchPage(driver);
 			System.out.println("Set Location to Bangalore");
 			touch.tap(tapOptions().withElement(element(searchPage.SetLocation))).perform();
 			// driver.findElementByAndroidUIAutomator("new UiScrollable(new
@@ -64,7 +66,6 @@ public class NB_BuyProperty extends Intialize {
 			touch.tap(tapOptions().withElement(element(searchPage.Bangalore))).perform();
 			touch.tap(tapOptions().withElement(element(searchPage.SearchBuy))).perform();
 			wait.until(ExpectedConditions.visibilityOf(searchPage.SearchBuy));
-
 			searchPage.SearchBuy.sendKeys("Marathahalli");
 			System.out.println("Search Value Marathahalli");
 			((AndroidDriver<?>) driver).pressKey(new KeyEvent(AndroidKey.PAGE_DOWN));
@@ -99,6 +100,7 @@ public class NB_BuyProperty extends Intialize {
 	public void SelectResult() {
 
 		try {
+			BuyResult=new BuyResultPage(driver);
 			System.out.println("Select Search result for Buy");
 			BuyResult.SelectResult.get(1).click();
 			driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Report what wasn’t correct in this property\"))");
