@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="244264" started-at="2020-09-15T00:24:39 IST" finished-at="2020-09-15T00:28:43 IST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="244264" started-at="2020-09-15T00:24:39 IST" finished-at="2020-09-15T00:28:43 IST">
+      <class name="TestApplication.NB_BuyProperty">
+        <test-method status="PASS" signature="LaunchHome()[pri:1, instance:TestApplication.NB_BuyProperty@7c29daf3]" name="LaunchHome" duration-ms="49646" started-at="2020-09-15T00:24:39 IST" finished-at="2020-09-15T00:25:29 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchHome -->
+        <test-method status="PASS" signature="SearchBuy()[pri:2, instance:TestApplication.NB_BuyProperty@7c29daf3]" name="SearchBuy" duration-ms="38416" started-at="2020-09-15T00:25:29 IST" finished-at="2020-09-15T00:26:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchBuy -->
+        <test-method status="PASS" signature="SelectResult()[pri:3, instance:TestApplication.NB_BuyProperty@7c29daf3]" name="SelectResult" duration-ms="156105" started-at="2020-09-15T00:26:07 IST" finished-at="2020-09-15T00:28:43 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SelectResult -->
+      </class> <!-- TestApplication.NB_BuyProperty -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
