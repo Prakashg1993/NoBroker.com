@@ -15,6 +15,7 @@ public class SearchPage {
 	AppiumDriver<WebElement> driver; 
 
 	public SearchPage(AppiumDriver driver) {
+		this.driver=driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 
@@ -22,11 +23,11 @@ public class SearchPage {
 	public WebElement SetLocation;
 	@AndroidFindBy(xpath = "//*[@text='Bangalore']")
 	public WebElement Bangalore;
-	@AndroidFindBy(id = "com.nobroker.app:id/localityAutoCompleteTxt")
+	@AndroidFindBy(xpath  = "//*[@resource-id='com.nobroker.app:id/localityAutoCompleteTxt']")
 	public WebElement SearchBuy;
 	@AndroidFindBy(id = "com.nobroker.app:id/nearByRadio")
 	public WebElement NearByCheckBox;
-	@AndroidFindBy(xpath = "//*[@text()='SEARCH']")
+	@AndroidFindBy(xpath = "//android.widget.Button[@resource-id='com.nobroker.app:id/searchProperty']")
 	public WebElement SEARCH;
 
 	
