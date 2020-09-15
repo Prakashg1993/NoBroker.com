@@ -1,7 +1,5 @@
 package PageObjects;
 
-import java.util.List;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -25,8 +23,8 @@ public class LaunchPage {
 	@AndroidFindBy(id="com.android.packageinstaller:id/permission_allow_button")
 	public WebElement Allow;
 	
-	@AndroidFindBy(id  = "com.nobroker.app:id/buyLayout")
-	public List<WebElement> BuyTab;
+	@AndroidFindBy(id = "com.nobroker.app:id/buyLayout")
+	public WebElement BuyTab;
 
 	@AndroidFindBy(xpath  = "//*[@text='Search up to 3 Localities or Landmarks']")
 	public WebElement Search;

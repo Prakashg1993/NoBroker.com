@@ -18,7 +18,7 @@ public class BuyResultPage {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 
-	@AndroidFindBy(id = "com.nobroker.app:id/title_bar")
+	@AndroidFindBy(id = "android.widget.FrameLayout")
 	public List<WebElement> SelectResult;
 
 
@@ -27,9 +27,9 @@ public class BuyResultPage {
 
 	@AndroidFindBy(id = "com.nobroker.app:id/et_signup_phone")
 	public WebElement PhoneNumber;
-	@AndroidFindBy(xpath  = "//*[@resource-id='com.nobroker.app:id/rb_signup_pwd']")
+	@AndroidFindBy(id = "com.nobroker.app:id/rb_signup_pwd")
 	public WebElement iHavepwd;
-	@AndroidFindBy(id = "com.nobroker.app:id/et_signup_pwd")
+	@AndroidFindBy(xpath = "//android.widget.EditText[@id='com.nobroker.app:id/et_signup_pwd']")
 	public WebElement EnterPWD;
 	@AndroidFindBy(id = "com.nobroker.app:id/btn_signup")
 	public WebElement Continue;
@@ -42,7 +42,7 @@ public class BuyResultPage {
 	public WebElement Report;
 
 	
-	@AndroidFindBy(xpath  = "//android.widget.TextView[@text='2 BHK']")
+	@AndroidFindBy(className = "android.widget.TextView")
 	public WebElement CrtConfig;
 	@AndroidFindBy(id = "com.nobroker.app:id/btn_save")
 	public WebElement Savechange;
